@@ -20,11 +20,10 @@ public class player2 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //gets the inputs of the 
+        //gets the inputs of the player
         float horizontal= Input.GetAxisRaw("Horizontal2");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float vertical = Input.GetAxisRaw("Vertical2");
         if(Input.GetButton("Horizontal2")){
-            print("huh");
             player2RB.velocity = new Vector2(horizontal * speed, player2RB.velocity.y);
         }
         if(Input.GetButton("Vertical2")&&isTouchingGround==true){
