@@ -10,25 +10,54 @@ public class player1 : MonoBehaviour
     public float jump;
     public bool isFacingRight;
     public bool isTouchingGround;
+    public bool candash;
+    public bool isdashing;
+    public float dashspeed;
+    public bool dashtrigger;
+
+
     // Start is called before the first frame update
     void Start()
     {
+        
+        candash=true;
         isFacingRight = true;
-        speed = 5;
+        speed = 5f;
+        dashspeed=30f;
+        dashtrigger=false;
     }
 
     // Update is called once per frame
     void Update()
-    {
-        //gets the inputs of the 
+    { 
         float horizontal= Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
+        if(horizontal >0 && !isFacingRight){
+            Flip();
+        }else if(horizontal < 0 && isFacingRight){
+            Flip();
+        }
+        if(isdashing==true){
+            return;
+        }
+        //gets the inputs of the 
+        
         if(Input.GetButton("Horizontal")){
             player1RB.velocity = new Vector2(horizontal * speed, player1RB.velocity.y);
         }
         if(Input.GetButton("Vertical")&&isTouchingGround==true){
             player1RB.velocity = new Vector2(player1RB.velocity.x, jump);
         }
+        if(Input.GetButtonDown("Horizontal")){
+            if(dashtrigger==true&&candash==true){
+                dashtrigger=false;
+                StartCoroutine(dash());
+                return;
+            }
+            dashtrigger=true;
+            Invoke("falseify",0.4f);
+        }
+
     }
     public void Flip(){
         Vector2 currentscale = gameObject.transform.localScale;
@@ -44,6 +73,24 @@ public class player1 : MonoBehaviour
     public void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag=="ground"){
             isTouchingGround=false;
+        }
+    }
+
+    public IEnumerator dash(){
+        candash=false;
+        isdashing=true;
+        float oggravity=player1RB.gravityScale;
+        player1RB.gravityScale=0f;
+        player1RB.velocity=new Vector2(transform.localScale.x*dashspeed,0f);
+        yield return new WaitForSeconds(0.4f);
+        player1RB.gravityScale=oggravity;
+        isdashing=false;
+        yield return new WaitForSeconds(1.4f);
+        candash=true;
+    }
+    public void falseify(){
+        if(isdashing==false){
+        dashtrigger=false;
         }
     }
 }
