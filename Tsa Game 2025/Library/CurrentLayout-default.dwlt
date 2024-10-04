@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 939
-  m_MinSize: {x: 579, y: 342}
-  m_MaxSize: {x: 12004, y: 8042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 44
+  controlID: 104
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1367
     height: 939
-  m_MinSize: {x: 303, y: 342}
-  m_MaxSize: {x: 8003, y: 8042}
+  m_MinSize: {x: 303, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 18
+  controlID: 105
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -165,7 +165,7 @@ MonoBehaviour:
   m_MinSize: {x: 303, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 19
+  controlID: 106
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -230,7 +230,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -239,15 +239,15 @@ MonoBehaviour:
     y: 422
     width: 1367
     height: 517
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 16}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 16}
   - {fileID: 18}
   - {fileID: 17}
-  m_Selected: 0
-  m_LastSelected: 2
+  m_Selected: 2
+  m_LastSelected: 0
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,9 +310,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 23.179184, y: -0.5091758, z: 76.389114}
+    m_Target: {x: 5.095381, y: 1.3645214, z: 41.521896}
     speed: 2
-    m_Value: {x: 23.179184, y: -0.5091758, z: 76.389114}
+    m_Value: {x: 5.095381, y: 1.3645214, z: 41.521896}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -362,9 +362,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 15.358745
+    m_Target: 7.3700666
     speed: 2
-    m_Value: 15.358745
+    m_Value: 7.3700666
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -418,9 +418,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 763b0000
-      m_LastClickedID: 15222
-      m_ExpandedIDs: 5efbffff
+      m_SelectedIDs: 7c4d0000
+      m_LastClickedID: 19836
+      m_ExpandedIDs: 0ae3ffff66e4ffff96ebffff5aecffff64ecffffd4eefffff4eeffffe0f0ffffd0f1ffff5efbffff523b00006847000072470000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -557,10 +557,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -321
-    m_HBaseRangeMax: 321
-    m_VBaseRangeMin: -200.5
-    m_VBaseRangeMax: 200.5
+    m_HBaseRangeMin: -304
+    m_HBaseRangeMax: 304
+    m_VBaseRangeMin: -190
+    m_VBaseRangeMax: 190
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -577,11 +577,11 @@ MonoBehaviour:
     m_DrawArea:
       serializedVersion: 2
       x: 0
-      y: 0
+      y: 21
       width: 962
-      height: 401
+      height: 380
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 481, y: 200.5}
+    m_Translation: {x: 481, y: 190}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -589,9 +589,9 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -481
-      y: -200.5
+      y: -190
       width: 962
-      height: 401
+      height: 380
     m_MinimalGUI: 1
   m_defaultScale: 1
   m_LastWindowPixelSize: {x: 962, y: 401}
@@ -665,19 +665,19 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/script
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/script
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\racer\Documents\GitHub\Tsa-game-2025\Tsa Game 2025
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 563c0000
-    m_LastClickedID: 15446
+    m_SelectedIDs: 523c0000
+    m_LastClickedID: 15442
     m_ExpandedIDs: 00000000523c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -733,7 +733,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
+    m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000ae520000f63b0000c2450000463c0000f43b0000106f0000063e0000543e00000c3c0000106300003c3f0000c27b0000bc7b0000c87b0000ce7b0000d47b0000147c0000b47b0000da460000b44c0000c64c0000c04c0000024e0000064e0000ba4c000012500000ba4f0000ec790000007a00009e8f000008500000944f0000c4c40000ccf70000c6f7000022480000d04500003edf000048920100029e0100624b0000684b00000e6b000028480000126b0000785e01007e5e01000a6b0000a44d0000ca4b0000784b0000708e00006a4b0000a4600000dc5200004e550000904e0000e4500000e65c00002e550000000000008a7e0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -828,4 +828,4 @@ MonoBehaviour:
     m_PrefName: Preview_InspectorPreview
   m_PreviewWindow: {fileID: 0}
   m_LastInspectedObjectInstanceID: -1
-  m_LastVerticalScrollValue: 0
+  m_LastVerticalScrollValue: 360
