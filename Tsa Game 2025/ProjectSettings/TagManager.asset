@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ground
   - levelfinsh
+  - BOX
   layers:
   - Default
   - TransparentFX

@@ -14,7 +14,10 @@ public class player1 : MonoBehaviour
     public bool isdashing;
     public float dashspeed;
     public bool dashtrigger;
-
+    public GameObject player2object;
+    public GameObject player1object;
+    public Transform player1orgin;
+    public Transform player2orgin;
 
     // Start is called before the first frame update
     void Start()
@@ -66,12 +69,16 @@ public class player1 : MonoBehaviour
         isFacingRight= !isFacingRight;
     }
     public void OnCollisionStay2D(Collision2D collision){
-        if(collision.gameObject.tag=="ground"){
+        if(collision.gameObject.tag=="ground"||collision.gameObject.tag=="BOX"){
             isTouchingGround=true;
+        }
+        if(collision.gameObject.tag=="hurt"){
+            player1object.transform.position=player1orgin.position;
+            player2object.transform.position=player2orgin.position;
         }
     }
     public void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.tag=="ground"){
+        if(collision.gameObject.tag=="ground"||collision.gameObject.tag=="BOX"){
             isTouchingGround=false;
         }
     }
