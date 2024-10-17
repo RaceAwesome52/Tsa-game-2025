@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class telportable : MonoBehaviour
 {
+    public Transform  placetoteleport;
     // Start is called before the first frame update
     void Start()
     {
@@ -14,5 +15,30 @@ public class telportable : MonoBehaviour
     void Update()
     {
         
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "teleporter")
+        {
+            placetoteleport = collision.gameObject.transform.parent.transform.parent.GetChild(0).GetChild(0).transform;
+            if (placetoteleport == collision.gameObject.transform)
+            {
+                placetoteleport = collision.gameObject.transform.parent.transform.parent.GetChild(1).GetChild(0).transform;
+            }
+            Invoke("TELE",6F);
+            print("invoked");
+        }
+    }
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "teleporter"){
+            print("nowork");
+            CancelInvoke("TELE");
+        }
+        
+    }
+    public void TELE()
+    {
+        this.gameObject.transform.position = new Vector3(placetoteleport.position.x, placetoteleport.position.y + 1f, 65f);
     }
 }
