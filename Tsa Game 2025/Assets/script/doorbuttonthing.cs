@@ -17,13 +17,13 @@ public class doorbuttonthing : MonoBehaviour
         
     }
     public void OnCollisionStay2D(Collision2D collision){
-        if(collision.gameObject.tag=="Player"){
+        if(collision.gameObject.tag=="Player" || collision.gameObject.tag=="Box"){
             //temp do animation later
             door.SetActive(false);
         }
     }
     public void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.tag=="Player"){
+        if(collision.gameObject.tag=="Player"||collision.gameObject.tag=="Box"){
             //temp do animation later
             door.SetActive(true);
         }
