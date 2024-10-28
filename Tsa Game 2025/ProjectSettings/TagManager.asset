@@ -10,6 +10,8 @@ TagManager:
   - hurt
   - teleporter
   - enemy
+  - right movement
+  - left movement
   layers:
   - Default
   - TransparentFX
