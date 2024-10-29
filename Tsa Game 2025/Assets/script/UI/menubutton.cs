@@ -4,6 +4,7 @@ using UnityEngine;
 using UnityEngine.SceneManagement;
 public class menubutton : MonoBehaviour
 {
+    public GameObject creds;
     // Start is called before the first frame update
     void Start()
     {
@@ -17,5 +18,9 @@ public class menubutton : MonoBehaviour
     }
     public void play(){
         SceneManager.LoadScene(1);
+    }
+    public void credbutt()
+    {
+        creds.SetActive(true);
     }
 }
