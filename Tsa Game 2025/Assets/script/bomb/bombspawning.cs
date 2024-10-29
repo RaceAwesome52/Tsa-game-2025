@@ -9,7 +9,7 @@ public class bombspawning : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        InvokeRepeating("spawnboom",9f,9f);
+        InvokeRepeating("spawnboom",4.5f,4.5f);
     }
 
     // Update is called once per frame
@@ -18,6 +18,6 @@ public class bombspawning : MonoBehaviour
 
     }
     public void spawnboom(){
-        Instantiate(bombPrefab, bomspwan);
+        Instantiate(bombPrefab, bomspwan.position, bomspwan.rotation);
     }
 }
