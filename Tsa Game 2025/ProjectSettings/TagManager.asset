@@ -12,6 +12,7 @@ TagManager:
   - enemy
   - right movement
   - left movement
+  - explosion
   layers:
   - Default
   - TransparentFX
