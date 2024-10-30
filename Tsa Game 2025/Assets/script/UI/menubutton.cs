@@ -9,6 +9,7 @@ public class menubutton : MonoBehaviour
     public GameObject levekselekscreen;
     public GameObject creditsbutton;
     public GameObject backbutton;
+    public GameObject howButton;
     // Start is called before the first frame update
     void Start()
     {
@@ -28,5 +29,9 @@ public class menubutton : MonoBehaviour
         creds.SetActive(true);
         creditsbutton.SetActive(false);
         levelselectbutton.SetActive(false);
+        howButton.SetActive(false);
+    }
+    public void howtoplay(){
+
     }
 }
