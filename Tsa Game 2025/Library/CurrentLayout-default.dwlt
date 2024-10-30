@@ -112,10 +112,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 939
-  m_MinSize: {x: 577, y: 471}
-  m_MaxSize: {x: 14001, y: 14042}
+  m_MinSize: {x: 579, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 64
+  controlID: 19
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -137,10 +137,10 @@ MonoBehaviour:
     y: 0
     width: 1367
     height: 939
-  m_MinSize: {x: 302, y: 471}
+  m_MinSize: {x: 303, y: 492}
   m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 65
+  controlID: 107
 --- !u!114 &7
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -162,10 +162,10 @@ MonoBehaviour:
     y: 0
     width: 1367
     height: 423
-  m_MinSize: {x: 302, y: 200}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 303, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 40
+  controlID: 108
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -185,8 +185,8 @@ MonoBehaviour:
     y: 0
     width: 429
     height: 423
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 13}
   m_Panes:
   - {fileID: 13}
@@ -267,8 +267,8 @@ MonoBehaviour:
     y: 0
     width: 553
     height: 939
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 19}
@@ -305,14 +305,14 @@ MonoBehaviour:
   m_Gizmos: 1
   m_SceneIsLit: 0
   m_SceneLighting: 1
-  m_2DMode: 0
+  m_2DMode: 1
   m_isRotationLocked: 0
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -14.03915, y: -1.6759263, z: 106.67373}
+    m_Target: {x: 190.41727, y: 35.266663, z: -160.81113}
     speed: 2
-    m_Value: {x: -14.03915, y: -1.6759263, z: 106.67373}
+    m_Value: {x: 197.4348, y: 36.76938, z: -160.36882}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -340,7 +340,7 @@ MonoBehaviour:
       m_Size: {x: 0, y: 0}
     yGrid:
       m_Fade:
-        m_Target: 1
+        m_Target: 0
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
@@ -348,7 +348,7 @@ MonoBehaviour:
       m_Size: {x: 1, y: 1}
     zGrid:
       m_Fade:
-        m_Target: 0
+        m_Target: 1
         speed: 2
         m_Value: 1
       m_Color: {r: 0.5, g: 0.5, b: 0.5, a: 0.4}
@@ -358,17 +358,17 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.0073216124, y: -0.23744668, z: 0.00450478, w: 0.97136337}
+    m_Target: {x: 0, y: 0, z: 0, w: 1}
     speed: 2
-    m_Value: {x: 0.00877134, y: -0.23889624, z: 0.004874104, w: 0.9709932}
+    m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 32.907635
+    m_Target: 117.34644
     speed: 2
-    m_Value: 32.907635
+    m_Value: 122.875854
   m_Ortho:
-    m_Target: 0
+    m_Target: 1
     speed: 2
-    m_Value: 0
+    m_Value: 1
   m_CameraSettings:
     m_Speed: 2
     m_SpeedNormalized: 1
@@ -382,7 +382,7 @@ MonoBehaviour:
     m_FarClip: 10000
     m_DynamicClip: 1
     m_OcclusionCulling: 0
-  m_LastSceneViewRotation: {x: -0.08717229, y: 0.89959055, z: -0.21045254, w: -0.3726226}
+  m_LastSceneViewRotation: {x: 0.0073216124, y: -0.23744668, z: 0.00450478, w: 0.97136337}
   m_LastSceneViewOrtho: 0
   m_ReplacementShader: {fileID: 0}
   m_ReplacementString: 
@@ -418,20 +418,20 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: bc3d0000
-      m_LastClickedID: 0
-      m_ExpandedIDs: fcebffff28ecffff60ecfffffeecffff26edffff58edffff32efffff4cefffff94efffff3cf0ffff84f1ffff9ef1ffffacf1ffff9ef6ffff103d0000243d0000d63f0000e240000010410000244300006e43000072440000fe490000724c000028500000b0530000
+      m_SelectedIDs: 98460000
+      m_LastClickedID: 18072
+      m_ExpandedIDs: a2f2ffffb0f2ffffccf2ffff00f5ffff58f5ffff6cf5ffff80f5ffff5efbffff4e3b00006a3b00008c3b00008e400000a6460000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: EventSystem
-        m_OriginalName: EventSystem
+        m_Name: credit button
+        m_OriginalName: credit button
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: 17772
+        m_UserData: 15244
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
         m_OriginalEventType: 0
@@ -566,7 +566,7 @@ MonoBehaviour:
     x: 429
     y: 73
     width: 936
-    height: 401
+    height: 402
   m_ViewDataDictionary: {fileID: 0}
   m_SerializedViewNames: []
   m_SerializedViewValues: []
@@ -576,7 +576,7 @@ MonoBehaviour:
   m_ShowGizmos: 0
   m_TargetDisplay: 0
   m_ClearColor: {r: 0, g: 0, b: 0, a: 0}
-  m_TargetSize: {x: 608, y: 380}
+  m_TargetSize: {x: 610, y: 381}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
   m_RenderIMGUI: 1
@@ -591,10 +591,10 @@ MonoBehaviour:
     m_VRangeLocked: 0
     hZoomLockedByDefault: 0
     vZoomLockedByDefault: 0
-    m_HBaseRangeMin: -304
-    m_HBaseRangeMax: 304
-    m_VBaseRangeMin: -190
-    m_VBaseRangeMax: 190
+    m_HBaseRangeMin: -305
+    m_HBaseRangeMax: 305
+    m_VBaseRangeMin: -190.5
+    m_VBaseRangeMax: 190.5
     m_HAllowExceedBaseRangeMin: 1
     m_HAllowExceedBaseRangeMax: 1
     m_VAllowExceedBaseRangeMin: 1
@@ -613,9 +613,9 @@ MonoBehaviour:
       x: 0
       y: 21
       width: 936
-      height: 380
+      height: 381
     m_Scale: {x: 1, y: 1}
-    m_Translation: {x: 468, y: 190}
+    m_Translation: {x: 468, y: 190.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -623,12 +623,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -468
-      y: -190
+      y: -190.5
       width: 936
-      height: 380
+      height: 381
     m_MinimalGUI: 1
   m_defaultScale: 1
-  m_LastWindowPixelSize: {x: 936, y: 401}
+  m_LastWindowPixelSize: {x: 936, y: 402}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -699,20 +699,20 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/UI
+    - Assets/Scenes
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/UI
+  - Assets/Scenes
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\racer\Documents\GitHub\Tsa-game-2025\Tsa Game 2025
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: ae3d0000
-    m_LastClickedID: 15790
-    m_ExpandedIDs: 00000000903d0000923d0000943d0000983d000000ca9a3b
+    m_SelectedIDs: 7c3c0000
+    m_LastClickedID: 15484
+    m_ExpandedIDs: 00000000623c0000643c0000663c0000683c000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -740,7 +740,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000903d0000923d0000943d0000963d0000
+    m_ExpandedIDs: 00000000623c0000643c0000663c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -767,8 +767,8 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 0
-    m_ExpandedInstanceIDs: c6230000ae520000f63b0000c2450000463c0000f43b0000106f0000063e0000543e00000c3c0000106300003c3f0000c27b0000bc7b0000c87b0000ce7b0000d47b0000147c0000b47b0000da460000b44c0000c64c0000c04c0000024e0000064e0000ba4c000012500000ba4f0000ec790000007a00009e8f000008500000944f0000c4c40000ccf70000c6f7000022480000d04500003edf000048920100029e0100624b0000684b00000e6b000028480000126b0000785e01007e5e01000a6b0000a44d0000ca4b0000784b0000708e00006a4b0000a4600000dc5200004e550000904e0000e4500000e65c00002e550000000000008a7e0000463d00004a3d00007a6700004e3f0000e6490000
+    m_HadKeyboardFocusLastEvent: 1
+    m_ExpandedInstanceIDs: c6230000ae520000f63b0000c2450000463c0000f43b0000106f0000063e0000543e00000c3c0000106300003c3f0000c27b0000bc7b0000c87b0000ce7b0000d47b0000147c0000b47b0000da460000b44c0000c64c0000c04c0000024e0000064e0000ba4c000012500000ba4f0000ec790000007a00009e8f000008500000944f0000c4c40000ccf70000c6f7000022480000d04500003edf000048920100029e0100624b0000684b00000e6b000028480000126b0000785e01007e5e01000a6b0000a44d0000ca4b0000784b0000708e00006a4b0000a4600000dc5200004e550000904e0000e4500000e65c00002e550000000000008a7e0000463d00004a3d00007a6700004e3f0000e6490000823c0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
