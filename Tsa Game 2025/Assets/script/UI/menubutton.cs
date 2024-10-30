@@ -5,6 +5,10 @@ using UnityEngine.SceneManagement;
 public class menubutton : MonoBehaviour
 {
     public GameObject creds;
+    public GameObject levelselectbutton;
+    public GameObject levekselekscreen;
+    public GameObject creditsbutton;
+    public GameObject backbutton;
     // Start is called before the first frame update
     void Start()
     {
@@ -22,5 +26,7 @@ public class menubutton : MonoBehaviour
     public void credbutt()
     {
         creds.SetActive(true);
+        creditsbutton.SetActive(false);
+        levelselectbutton.SetActive(false);
     }
 }
