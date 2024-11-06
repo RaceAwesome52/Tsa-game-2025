@@ -94,10 +94,14 @@ public class player2 : MonoBehaviour
         candash=false;
         isdashing=true;
         float oggravity=player2RB.gravityScale;
-        player2RB.gravityScale=0f;
+        player2RB.gravityScale=0.01f;
         player2RB.velocity=new Vector2(transform.localScale.x*dashspeed,0f);
         yield return new WaitForSeconds(0.4f);
-        player2RB.gravityScale=oggravity;
+        if(player2RB.gravityScale<0){
+            player2RB.gravityScale=oggravity*-1;
+        }else{
+            player2RB.gravityScale=oggravity;
+        }
         isdashing=false;
         yield return new WaitForSeconds(1.4f);
         candash=true;

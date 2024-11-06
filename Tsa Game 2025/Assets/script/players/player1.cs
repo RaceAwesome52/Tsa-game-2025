@@ -106,7 +106,7 @@ public class player1 : MonoBehaviour
         candash=false;
         isdashing=true;
         float oggravity=player1RB.gravityScale;
-        player1RB.gravityScale=0f;
+        player1RB.gravityScale=0.01f;
         if(isFacingRight==true){
             player1RB.velocity=new Vector2(1*dashspeed,0f);
         }
@@ -116,7 +116,11 @@ public class player1 : MonoBehaviour
         }
 
         yield return new WaitForSeconds(0.4f);
-        player1RB.gravityScale=oggravity;
+        if(player1RB.gravityScale<0){
+            player1RB.gravityScale=oggravity*-1;
+        }else{
+            player1RB.gravityScale=oggravity;
+        }
         isdashing=false;
         anim.SetInteger("state",1);
         yield return new WaitForSeconds(1.4f);

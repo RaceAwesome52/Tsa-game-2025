@@ -5,6 +5,7 @@ using UnityEngine;
 public class doorbuttonthing : MonoBehaviour
 {
     public GameObject door;
+    public Animator anim;
     // Start is called before the first frame update
     void Start()
     {
@@ -19,12 +20,14 @@ public class doorbuttonthing : MonoBehaviour
     public void OnCollisionStay2D(Collision2D collision){
         if(collision.gameObject.tag=="Player" || collision.gameObject.tag=="Box"){
             //temp do animation later
+            anim.SetBool("isdown",true);
             door.SetActive(false);
         }
     }
     public void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag=="Player"||collision.gameObject.tag=="Box"){
             //temp do animation later
+            anim.SetBool("isdown",false);
             door.SetActive(true);
         }
     }
