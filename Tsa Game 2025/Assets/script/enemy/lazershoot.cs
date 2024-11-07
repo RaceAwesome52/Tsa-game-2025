@@ -6,6 +6,7 @@ public class lazershoot : MonoBehaviour
 {
     public GameObject lazerPrefab;
     public Transform lazerspawn;
+    public GameObject lazer;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,6 +19,6 @@ public class lazershoot : MonoBehaviour
 
     }
     public void LAZERBLAST(){
-        Instantiate(lazerPrefab, lazerspawn.position, lazerspawn.rotation);
+        lazer=Instantiate(lazerPrefab, lazerspawn.position, lazerspawn.rotation);
     }
 }
