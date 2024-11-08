@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class gravityswitch : MonoBehaviour
 {
-    public Transform playertransform;
+    public SpriteRenderer sprite;
     public Rigidbody2D playerrigidbody;
     // Start is called before the first frame update
     void Start()
@@ -21,11 +21,16 @@ public class gravityswitch : MonoBehaviour
         if(other.gameObject.tag=="Player"){
             print("please");
             playerrigidbody=other.gameObject.GetComponent<Rigidbody2D>();
-            playertransform=other.gameObject.GetComponent<Transform>();
+            sprite=other.gameObject.GetComponent<SpriteRenderer>();
             playerrigidbody.gravityScale *= -1;
-            Vector3 newDirection = playertransform.localScale;
-            newDirection.y *= -1;
-            playertransform.localScale = newDirection;
+            if(sprite.flipY==false){
+                sprite.flipY=true;
+                return;
+            }
+            if(sprite.flipY==true){
+                sprite.flipY=false;
+                return;
+            }
         }
     }
     

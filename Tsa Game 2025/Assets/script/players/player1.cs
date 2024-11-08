@@ -56,8 +56,15 @@ public class player1 : MonoBehaviour
             }
         }
         if(Input.GetButton("Vertical")&&isTouchingGround==true){
-            player1RB.velocity = new Vector2(player1RB.velocity.x, jump);
             anim.SetInteger("state",2);
+            if(render.flipY==true){
+                player1RB.velocity = new Vector2(player1RB.velocity.x, -jump);
+                return;
+            }
+            if(render.flipY==false){
+                player1RB.velocity = new Vector2(player1RB.velocity.x, jump);
+                return;
+            }
         }
         if(Input.GetButtonDown("Horizontal")){
             if(dashtrigger==true&&candash==true){
@@ -114,7 +121,6 @@ public class player1 : MonoBehaviour
             render.flipX=true;
             player1RB.velocity=new Vector2(-1*dashspeed,0f);
         }
-
         yield return new WaitForSeconds(0.4f);
         if(player1RB.gravityScale<0){
             player1RB.gravityScale=oggravity*-1;
