@@ -525,7 +525,7 @@ PrefabInstance:
     - target: {fileID: 2352189854509392699, guid: e547f5e8910238947879fa29b3008e84,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: -70
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2352189854509392699, guid: e547f5e8910238947879fa29b3008e84,
         type: 3}
@@ -615,7 +615,7 @@ MonoBehaviour:
   offset: {x: 0, y: 0}
   targets:
   - {fileID: 148466355}
-  - {fileID: 0}
+  - {fileID: 179834287}
   smoothTime: 0.5
 --- !u!81 &231064532
 AudioListener:
