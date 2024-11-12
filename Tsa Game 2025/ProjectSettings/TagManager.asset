@@ -13,6 +13,7 @@ TagManager:
   - right movement
   - left movement
   - explosion
+  - wall
   layers:
   - Default
   - TransparentFX

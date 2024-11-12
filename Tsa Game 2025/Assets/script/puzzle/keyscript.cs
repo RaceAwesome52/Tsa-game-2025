@@ -4,6 +4,7 @@ using UnityEngine;
 public class keyscript : MonoBehaviour
 {
     public GameObject door;
+    public Animator dooranim;
     // Start is called before the first frame update
     void Start()
     {
@@ -18,7 +19,7 @@ public class keyscript : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag=="Player"){
             //destroys the door...for now play an animation later
-            Destroy(door);
+            dooranim.SetBool("active",true);
             Destroy(this.gameObject);
         }
     }

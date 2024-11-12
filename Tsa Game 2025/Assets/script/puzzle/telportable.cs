@@ -20,12 +20,12 @@ public class telportable : MonoBehaviour
     {
         if (collision.gameObject.tag == "teleporter")
         {
-            placetoteleport = collision.gameObject.transform.parent.transform.parent.GetChild(0).GetChild(0).transform;
+            placetoteleport = collision.gameObject.transform.parent.GetChild(0).transform;
             if (placetoteleport == collision.gameObject.transform)
             {
-                placetoteleport = collision.gameObject.transform.parent.transform.parent.GetChild(1).GetChild(0).transform;
+                placetoteleport = collision.gameObject.transform.parent.GetChild(1).transform;
             }
-            Invoke("TELE",6F);
+            Invoke("TELE",3F);
             print("invoked");
         }
     }
