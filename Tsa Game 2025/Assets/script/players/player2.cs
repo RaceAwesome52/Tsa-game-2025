@@ -89,6 +89,12 @@ public class player2 : MonoBehaviour
         if(collision.gameObject.tag=="ground"||collision.gameObject.tag=="BOX"){
             isTouchingGround=true;
         }
+        if(collision.gameObject.tag=="enemy" && isdashing==true){
+            Destroy(collision.gameObject);
+        }else if(collision.gameObject.tag=="enemy"){
+            player1object.transform.position=player1orgin.position;
+            player2object.transform.position=player2orgin.position;
+        }
     }
     public void OnCollisionExit2D(Collision2D collision){
         if(collision.gameObject.tag=="ground"||collision.gameObject.tag=="BOX"){

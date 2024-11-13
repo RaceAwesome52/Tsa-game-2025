@@ -19,7 +19,6 @@ public class gravityswitch : MonoBehaviour
     }
     public void OnTriggerEnter2D(Collider2D other){
         if(other.gameObject.tag=="Player"){
-            print("please");
             playerrigidbody=other.gameObject.GetComponent<Rigidbody2D>();
             sprite=other.gameObject.GetComponent<SpriteRenderer>();
             playerrigidbody.gravityScale *= -1;

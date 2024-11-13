@@ -19,19 +19,19 @@ public class enemy2movement : MonoBehaviour
     {
         if (currentvelocitystate == 1)
         {
-            thisrb.velocity = new Vector2(10f, 10f);
+            thisrb.velocity = new Vector2(5f, 5f);
         }
         if (currentvelocitystate == 2)
         {
-            thisrb.velocity = new Vector2(10f, -10f);
+            thisrb.velocity = new Vector2(5f, -5f);
         }
         if (currentvelocitystate == 3)
         {
-            thisrb.velocity = new Vector2(-10f, 10f);
+            thisrb.velocity = new Vector2(-5f, 5f);
         }
         if (currentvelocitystate == 4)
         {
-            thisrb.velocity = new Vector2(-10f, -10f);
+            thisrb.velocity = new Vector2(-5f, -5f);
         }
     }
     public void OnCollisionEnter2D(Collision2D collision)
