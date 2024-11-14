@@ -5,9 +5,9 @@ ScriptsOnlyBuild:
     - bombspawning
     - doorbuttonthing
     - enemy1movement
+    - enemy2movement
     - gravityswitch
     - keyscript
-    - lazershoot
     - menubutton
     - multitargetcamera
     - nextlevelportal
@@ -58,6 +58,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 81
       Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
+      Script: {instanceID: 0}
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
@@ -83,6 +87,8 @@ ScriptsOnlyBuild:
     - Class: 157
       Script: {instanceID: 0}
     - Class: 196
+      Script: {instanceID: 0}
+    - Class: 212
       Script: {instanceID: 0}
     - Class: 213
       Script: {instanceID: 0}
@@ -124,8 +130,6 @@ ScriptsOnlyBuild:
     - Class: 95
       Script: {instanceID: 0}
     - Class: 104
-      Script: {instanceID: 0}
-    - Class: 108
       Script: {instanceID: 0}
     - Class: 114
       Script: {instanceID: 11336}
@@ -191,6 +195,10 @@ ScriptsOnlyBuild:
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
+      Script: {instanceID: 0}
+    - Class: 82
+      Script: {instanceID: 0}
+    - Class: 83
       Script: {instanceID: 0}
     - Class: 91
       Script: {instanceID: 0}
@@ -265,8 +273,6 @@ ScriptsOnlyBuild:
       Script: {instanceID: 0}
     - Class: 61
       Script: {instanceID: 0}
-    - Class: 64
-      Script: {instanceID: 0}
     - Class: 74
       Script: {instanceID: 0}
     - Class: 81
@@ -278,9 +284,13 @@ ScriptsOnlyBuild:
     - Class: 104
       Script: {instanceID: 0}
     - Class: 114
+      Script: {instanceID: 11388}
+    - Class: 114
       Script: {instanceID: 11558}
     - Class: 114
       Script: {instanceID: 11800}
+    - Class: 114
+      Script: {instanceID: 11986}
     - Class: 114
       Script: {instanceID: 12312}
     - Class: 114
@@ -294,12 +304,8 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 14380}
     - Class: 114
-      Script: {instanceID: 14616}
-    - Class: 114
       Script: {instanceID: 14808}
     - Class: 115
-      Script: {instanceID: 0}
-    - Class: 135
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -312,6 +318,40 @@ ScriptsOnlyBuild:
     - Class: 212
       Script: {instanceID: 0}
     - Class: 213
+      Script: {instanceID: 0}
+    Assets/Scenes/scene 4.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
+      Script: {instanceID: 0}
+    Assets/Scenes/scene 5.unity:
+    - Class: 1
+      Script: {instanceID: 0}
+    - Class: 4
+      Script: {instanceID: 0}
+    - Class: 20
+      Script: {instanceID: 0}
+    - Class: 28
+      Script: {instanceID: 0}
+    - Class: 81
+      Script: {instanceID: 0}
+    - Class: 104
+      Script: {instanceID: 0}
+    - Class: 157
+      Script: {instanceID: 0}
+    - Class: 196
       Script: {instanceID: 0}
   scriptHashData:
   - hash:
@@ -610,7 +650,7 @@ ScriptsOnlyBuild:
     className: NoiseSettings
   - hash:
       serializedVersion: 2
-      Hash: d022df640aee2858647a3ad4764cae35
+      Hash: ed58c0a57c6f6a6688198c4fe1ab1966
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: menubutton
@@ -676,7 +716,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: dca535aa977f7182dd3a0479829c9841
+      Hash: 5d52a026f062034f5ba06b569790a370
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player2
@@ -754,7 +794,7 @@ ScriptsOnlyBuild:
     className: CinemachinePipeline
   - hash:
       serializedVersion: 2
-      Hash: c744db285029cf24a2a6b0d2c361c2d3
+      Hash: e1fa56269c7212ffbec04ea15c56aada
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: keyscript
@@ -874,7 +914,7 @@ ScriptsOnlyBuild:
     className: SpriteLibraryAsset
   - hash:
       serializedVersion: 2
-      Hash: 6e2fe44cf439889d119ebddd3b62f44c
+      Hash: edc251f5fa23081bf49f4c93b21574a2
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: gravityswitch
@@ -1138,7 +1178,7 @@ ScriptsOnlyBuild:
     className: Toggle
   - hash:
       serializedVersion: 2
-      Hash: 0f988de946a38eccc23102144a92d73d
+      Hash: a81e5f446eb0d5c1fd8c5c5f901e61a5
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: doorbuttonthing
@@ -1178,4 +1218,6 @@ ScriptsOnlyBuild:
   - Assets/Scenes/scene 1.unity
   - Assets/Scenes/scene 2.unity
   - Assets/Scenes/scene 3.unity
+  - Assets/Scenes/scene 4.unity
+  - Assets/Scenes/scene 5.unity
   playerPath: F:/builds/tsa game 2025/Tsa Game 2025.exe
