@@ -7,11 +7,12 @@ public class enemy2movement : MonoBehaviour
     
     public Rigidbody2D thisrb;
     public int currentvelocitystate;
+    public BoxCollider2D enemyboxcoplider;
     // Start is called before the first frame update
     void Start()
     {
         currentvelocitystate = 1;
-        
+        enemyboxcoplider= gameObject.GetComponent<BoxCollider2D>();
     }
 
     // Update is called once per frame
@@ -36,6 +37,10 @@ public class enemy2movement : MonoBehaviour
     }
     public void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.tag == "enemy"){
+            enemyboxcoplider.isTrigger = true;
+            Invoke("untrigger",0.2f);
+        }
         if (collision.gameObject.tag == "ground")
         {
             if (currentvelocitystate == 1)
@@ -82,5 +87,8 @@ public class enemy2movement : MonoBehaviour
                 return;
             }
         }
+    }
+    public void untrigger(){
+        enemyboxcoplider.isTrigger = false;
     }
 }
