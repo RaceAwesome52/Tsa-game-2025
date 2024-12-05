@@ -16,6 +16,7 @@ public class menubutton : MonoBehaviour
     public AudioClip audioclipthing;
     public AudioClip titlemusuic;
     public AudioClip selectmusic;
+    public GameObject title;
     public void Start(){
         musicaudio.clip=titlemusuic;
         musicaudio.Play();
@@ -25,6 +26,7 @@ public class menubutton : MonoBehaviour
         creditsbutton.SetActive(false);
         levelselectbutton.SetActive(false);
         howButton.SetActive(false);
+        title.SetActive(false);
         worldselect.SetActive(true);
         backbutton.SetActive(true);
         musicaudio.clip=selectmusic;
@@ -47,6 +49,7 @@ public class menubutton : MonoBehaviour
         howButton.SetActive(true);
         worldselect.SetActive(false);
         backbutton.SetActive(false);
+        title.SetActive(true);
         creds.SetActive(false);
         audio.Play();
         if(musicaudio.clip==selectmusic){

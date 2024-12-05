@@ -4005,6 +4005,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: push box
       objectReference: {fileID: 0}
+    - target: {fileID: 1440099787672897967, guid: cc6e729ebe5103c41a83ad0e8fe469f0,
+        type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cc6e729ebe5103c41a83ad0e8fe469f0, type: 3}
 --- !u!1001 &4133695717618997597

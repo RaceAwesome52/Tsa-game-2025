@@ -297,6 +297,7 @@ MonoBehaviour:
   audioclipthing: {fileID: 8300000, guid: 5ef35f4b8c861894ba942a2b08d0ad55, type: 3}
   titlemusuic: {fileID: 8300000, guid: 76febf96151bb1e45a7aae6c2103f525, type: 3}
   selectmusic: {fileID: 8300000, guid: f2c03b97542c0fc45b8d015cb40cb657, type: 3}
+  title: {fileID: 670583818}
 --- !u!114 &252895537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1243,8 +1244,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -323, y: 168}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: -346.31, y: 79}
+  m_SizeDelta: {x: 81.37857, y: 81.37857}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &681167103
 MonoBehaviour:
@@ -2174,8 +2175,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -30, y: -167}
-  m_SizeDelta: {x: 100, y: 100}
+  m_AnchoredPosition: {x: 166.7, y: -215.6}
+  m_SizeDelta: {x: 68.53621, y: 68.53621}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1125233445
 MonoBehaviour:
