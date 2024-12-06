@@ -15,6 +15,9 @@ TagManager:
   - explosion
   - wall
   - destroy
+  - eraser
+  - right movement e
+  - left movement e
   layers:
   - Default
   - TransparentFX

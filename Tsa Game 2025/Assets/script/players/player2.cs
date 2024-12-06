@@ -5,6 +5,7 @@ using UnityEngine;
 public class player2 : MonoBehaviour
 {   
     public Rigidbody2D player2RB;
+    public Rigidbody2D player1RB;
     public Transform player2Transforms;
     public float speed;
     public float jump;
@@ -20,6 +21,7 @@ public class player2 : MonoBehaviour
     public Transform player2orgin;
     public Animator anim2;
     public SpriteRenderer render;
+    public SpriteRenderer otherrender;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,12 +105,32 @@ public class player2 : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag=="hurt"){
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
             player1object.transform.position=player1orgin.position;
             player2object.transform.position=player2orgin.position;
         }
         if(other.gameObject.tag=="enemy" && isdashing==true){
             Destroy(other.gameObject);
-        }else if(other.gameObject.tag=="enemy"&& isdashing==false){
+        }else if(other.gameObject.tag=="enemy"&& isdashing==false){ 
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
+            player1object.transform.position=player1orgin.position;
+            player2object.transform.position=player2orgin.position;
+        }
+        if(other.gameObject.tag=="eraser"){
+            if(player2RB.velocity.y <-1){
+                Destroy(other.gameObject);
+            }
+            print("hello");
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
             player1object.transform.position=player1orgin.position;
             player2object.transform.position=player2orgin.position;
         }

@@ -5,6 +5,7 @@ using UnityEngine;
 public class player1 : MonoBehaviour
 {   
     public Rigidbody2D player1RB;
+    public Rigidbody2D player2RB;
     public Transform player1Transforms;
     public float speed;
     public float jump;
@@ -20,6 +21,7 @@ public class player1 : MonoBehaviour
     public Transform player2orgin;
     public Animator anim;
     public SpriteRenderer render;
+    public SpriteRenderer otherrender;
     // Start is called before the first frame update
     void Start()
     {
@@ -103,15 +105,35 @@ public class player1 : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag=="hurt"){
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
             player1object.transform.position=player1orgin.position;
             player2object.transform.position=player2orgin.position;
         }
         if(other.gameObject.tag=="enemy" && isdashing==true){
             Destroy(other.gameObject);
         }else if(other.gameObject.tag=="enemy"&& isdashing==false){
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
             player1object.transform.position=player1orgin.position;
             player2object.transform.position=player2orgin.position;
         }
+        if(other.gameObject.tag=="eraser"){
+            if(player1RB.velocity.y <-1){
+                Destroy(other.gameObject);
+            }
+            render.flipY=false;
+            otherrender.flipY=false;
+            player2RB.gravityScale = 5;
+            player1RB.gravityScale = 5;
+            player1object.transform.position=player1orgin.position;
+            player2object.transform.position=player2orgin.position;
+        }
+
     }
 
     public IEnumerator dash(){
