@@ -7,13 +7,16 @@ public class enemy3movement : MonoBehaviour
     public string direction;
     public int speed;
     public Animator anim;
+    public SpriteRenderer reder;
     // Start is called before the first frame update
     void Start()
     {
         speed=2;
         direction="right";
+        reder.flipX=true;
         anim.SetInteger("",2);
         anim=this.gameObject.GetComponent<Animator>();
+        
     }
 
     // Update is called once per frame
@@ -30,11 +33,11 @@ public class enemy3movement : MonoBehaviour
     public void OnTriggerEnter2D(Collider2D other){
         if(other.tag=="right movement e"){
             direction="right";
-            anim.SetInteger("",2);
+            reder.flipX=true;
         }
         if(other.tag=="left movement e"){
             direction="left";
-            anim.SetInteger("",3);
+            reder.flipX=false;
         }
     }
 }
