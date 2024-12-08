@@ -14,7 +14,6 @@ public class enemy3movement : MonoBehaviour
         speed=2;
         direction="right";
         reder.flipX=true;
-        anim.SetInteger("",2);
         anim=this.gameObject.GetComponent<Animator>();
         
     }
