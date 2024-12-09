@@ -151,7 +151,7 @@ Rigidbody2D:
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 1
-  m_Constraints: 7
+  m_Constraints: 5
 --- !u!114 &588230990432495893
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -168,3 +168,4 @@ MonoBehaviour:
   speed: 0
   anim: {fileID: 588230990432495889}
   reder: {fileID: 588230990432495890}
+  gravifgasdyu: {fileID: 588230990432495892}

@@ -18,6 +18,7 @@ public class miniboss1 : MonoBehaviour
     public Transform spawnguypos3;
     public GameObject guytospawn1;
     public GameObject bounceguy;
+    public int health = 3;
     // Start is called before the first frame update
     void Start()
     {
@@ -29,7 +30,9 @@ public class miniboss1 : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
+        if(health<=0){
+            Invoke("destruction",3f);
+        }
     }
     public void themoves()
     {
@@ -104,5 +107,23 @@ public class miniboss1 : MonoBehaviour
     public void spawnbounceguy(){
         Instantiate(bounceguy, spawnguypos3.position, transform.rotation);
         Invoke("themoves", Random.Range(2, 6));
+    }
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag=="antibossbomb"){
+            CancelInvoke("themoves");
+            health--;
+            for(int i = 0; i<targets.Length; i++){
+                player=targets[i];
+                playerrigidbody=player.GetComponent<Rigidbody2D>();
+                sprite=player.GetComponent<SpriteRenderer>();
+                sprite.flipY=false;
+                playerrigidbody.gravityScale = 3;
+            }
+            Invoke("themoves", 3f);
+        }
+        
+    }
+    public void destruction(){
+        Destroy(gameObject);
     }
 }

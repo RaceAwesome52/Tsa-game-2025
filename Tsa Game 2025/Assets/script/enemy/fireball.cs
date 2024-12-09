@@ -29,7 +29,7 @@ public class fireball : MonoBehaviour
         
         if (idkwhattocallthis == false)
         {
-            get = new Vector2(player.transform.position.x * 3, player.transform.position.y * 3);
+            get = new Vector2(player.transform.position.x * 5, player.transform.position.y * 5);
         }
     }
     public void truify()

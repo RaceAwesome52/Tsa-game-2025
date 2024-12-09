@@ -125,6 +125,7 @@ public class player2 : MonoBehaviour
         if(other.gameObject.tag=="eraser"){
             if(player2RB.velocity.y <-1){
                 Destroy(other.gameObject);
+                return;
             }
             print("hello");
             render.flipY=false;

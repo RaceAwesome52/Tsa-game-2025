@@ -18,6 +18,7 @@ TagManager:
   - eraser
   - right movement e
   - left movement e
+  - antibossbomb
   layers:
   - Default
   - TransparentFX

@@ -8,6 +8,7 @@ public class enemy3movement : MonoBehaviour
     public int speed;
     public Animator anim;
     public SpriteRenderer reder;
+    public Rigidbody2D gravifgasdyu;
     // Start is called before the first frame update
     void Start()
     {
@@ -30,13 +31,28 @@ public class enemy3movement : MonoBehaviour
         }
     }
     public void OnTriggerEnter2D(Collider2D other){
-        if(other.tag=="right movement e"){
+        if(other.gameObject.tag=="ground"){
+            gravifgasdyu.velocity = new Vector3(0, 0, 0);
+        }
+        if(other.gameObject.tag=="right movement e"){
             direction="right";
             reder.flipX=true;
         }
-        if(other.tag=="left movement e"){
+        if(other.gameObject.tag=="left movement e"){
             direction="left";
             reder.flipX=false;
+        }
+    }
+
+    public void OnTriggerStay2D(Collider2D other){
+        if(other.gameObject.tag=="ground"){
+            gravifgasdyu.gravityScale=0;
+            
+        }
+    }
+    public void OnTriggerExit2D(Collider2D other){
+        if(other.gameObject.tag=="ground"){
+            gravifgasdyu.gravityScale=4;
         }
     }
 }
