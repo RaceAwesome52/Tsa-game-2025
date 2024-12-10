@@ -6,6 +6,8 @@ public class player2 : MonoBehaviour
 {   
     public Rigidbody2D player2RB;
     public Rigidbody2D player1RB;
+    public Rigidbody2D player3RB;
+    public Rigidbody2D player4RB;
     public Transform player2Transforms;
     public float speed;
     public float jump;
@@ -17,11 +19,17 @@ public class player2 : MonoBehaviour
     public bool dashtrigger;
     public GameObject player2object;
     public GameObject player1object;
+    public GameObject player3object;
+    public GameObject player4object;
     public Transform player1orgin;
     public Transform player2orgin;
+    public Transform player3orgin;
+    public Transform player4orgin;
     public Animator anim2;
     public SpriteRenderer render;
     public SpriteRenderer otherrender;
+    public SpriteRenderer otherrender2;
+    public SpriteRenderer otherrender3;
     // Start is called before the first frame update
     void Start()
     {
@@ -94,8 +102,7 @@ public class player2 : MonoBehaviour
         if(collision.gameObject.tag=="enemy" && isdashing==true){
             Destroy(collision.gameObject);
         }else if(collision.gameObject.tag=="enemy"){
-            player1object.transform.position=player1orgin.position;
-            player2object.transform.position=player2orgin.position;
+            resetplayers();
         }
     }
     public void OnCollisionExit2D(Collision2D collision){
@@ -105,35 +112,19 @@ public class player2 : MonoBehaviour
     }
     public void OnTriggerStay2D(Collider2D other){
         if(other.gameObject.tag=="hurt"){
-            render.flipY=false;
-            otherrender.flipY=false;
-            player2RB.gravityScale = 5;
-            player1RB.gravityScale = 5;
-            player1object.transform.position=player1orgin.position;
-            player2object.transform.position=player2orgin.position;
+            resetplayers();
         }
         if(other.gameObject.tag=="enemy" && isdashing==true){
             Destroy(other.gameObject);
         }else if(other.gameObject.tag=="enemy"&& isdashing==false){ 
-            render.flipY=false;
-            otherrender.flipY=false;
-            player2RB.gravityScale = 5;
-            player1RB.gravityScale = 5;
-            player1object.transform.position=player1orgin.position;
-            player2object.transform.position=player2orgin.position;
+            resetplayers();
         }
         if(other.gameObject.tag=="eraser"){
             if(player2RB.velocity.y <-1){
                 Destroy(other.gameObject);
                 return;
             }
-            print("hello");
-            render.flipY=false;
-            otherrender.flipY=false;
-            player2RB.gravityScale = 5;
-            player1RB.gravityScale = 5;
-            player1object.transform.position=player1orgin.position;
-            player2object.transform.position=player2orgin.position;
+            resetplayers();
         }
     }
     public IEnumerator dash(){
@@ -165,5 +156,19 @@ public class player2 : MonoBehaviour
         if(isdashing==false){
             dashtrigger=false;
         }
+    }
+    public void resetplayers(){
+        render.flipY=false;
+        otherrender.flipY=false;
+        otherrender2.flipY=false;
+        otherrender3.flipY=false;
+        player2RB.gravityScale = 5;
+        player1RB.gravityScale = 5;
+        player3RB.gravityScale = 5;
+        player4RB.gravityScale = 5;
+        player1object.transform.position=player1orgin.position;
+        player2object.transform.position=player2orgin.position;
+        player3object.transform.position=player3orgin.position;
+        player4object.transform.position=player4orgin.position;
     }
 }

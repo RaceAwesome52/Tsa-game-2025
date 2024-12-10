@@ -21,11 +21,15 @@ ScriptsOnlyBuild:
     - pausemenu
     - player1
     - player2
+    - player3
+    - player4
     - telportable
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Tilemap.Editor.dll:
     - UnityEditor.Tilemaps.GridPaintingState
+    - UnityEditor.Tilemaps.GridPaletteBrushes
+    - UnityEditor.Tilemaps.GridPalettes
     - UnityEditor.Tilemaps.SceneViewGridManager
     - UnityEditor.Tilemaps.TileDragAndDropManager
     Unity.Rider.Editor.dll:
@@ -33,8 +37,10 @@ ScriptsOnlyBuild:
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -152,8 +158,6 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 12676}
     - Class: 114
-      Script: {instanceID: 12996}
-    - Class: 114
       Script: {instanceID: 13096}
     - Class: 114
       Script: {instanceID: 13262}
@@ -165,6 +169,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14662}
     - Class: 114
       Script: {instanceID: 14822}
+    - Class: 114
+      Script: {instanceID: 48660}
+    - Class: 114
+      Script: {instanceID: 53628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -250,6 +258,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14822}
     - Class: 114
       Script: {instanceID: 14850}
+    - Class: 114
+      Script: {instanceID: 48660}
+    - Class: 114
+      Script: {instanceID: 53628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -339,6 +351,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14662}
     - Class: 114
       Script: {instanceID: 14822}
+    - Class: 114
+      Script: {instanceID: 48660}
+    - Class: 114
+      Script: {instanceID: 53628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -440,6 +456,10 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14822}
     - Class: 114
       Script: {instanceID: 14850}
+    - Class: 114
+      Script: {instanceID: 48660}
+    - Class: 114
+      Script: {instanceID: 53628}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 157
@@ -506,9 +526,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11390}
     - Class: 114
+      Script: {instanceID: 11658}
+    - Class: 114
       Script: {instanceID: 11800}
     - Class: 114
       Script: {instanceID: 12272}
+    - Class: 114
+      Script: {instanceID: 12450}
     - Class: 114
       Script: {instanceID: 12606}
     - Class: 114
@@ -525,7 +549,15 @@ ScriptsOnlyBuild:
       Script: {instanceID: 14392}
     - Class: 114
       Script: {instanceID: 14662}
+    - Class: 114
+      Script: {instanceID: 14822}
+    - Class: 114
+      Script: {instanceID: 48660}
+    - Class: 114
+      Script: {instanceID: 53628}
     - Class: 115
+      Script: {instanceID: 0}
+    - Class: 128
       Script: {instanceID: 0}
     - Class: 157
       Script: {instanceID: 0}
@@ -914,7 +946,7 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
-      Hash: 039b6f605767597f0fb67d74e90a448d
+      Hash: 9c4696800dad19826193f148f6968978
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player2
@@ -926,7 +958,7 @@ ScriptsOnlyBuild:
     className: CinemachinePOV
   - hash:
       serializedVersion: 2
-      Hash: a1e5a693d4f5b9dc8fe44ba382a91595
+      Hash: 9f8a9c8df42bec5116c6d0d1915ee898
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: multitargetcamera
@@ -1034,7 +1066,7 @@ ScriptsOnlyBuild:
     className: Button
   - hash:
       serializedVersion: 2
-      Hash: 340f1bafcb38a8fe73234996056e2ca3
+      Hash: 7716eb6df71a2ac71a6341afa7ca026e
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: miniboss1
@@ -1274,7 +1306,7 @@ ScriptsOnlyBuild:
     className: Cinemachine3rdPersonAim
   - hash:
       serializedVersion: 2
-      Hash: d8ae515a12e1dc7f64eafa716e541a5e
+      Hash: 60e9a6d5401db1a402caeb229e7e6d02
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: player1
@@ -1316,7 +1348,7 @@ ScriptsOnlyBuild:
     className: TMP_ColorGradient
   - hash:
       serializedVersion: 2
-      Hash: 2b6ac960ee45e6331617aae875a0ad29
+      Hash: ef7f75951e8a3fd61795ba1d2e01cd25
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: pausemenu
@@ -1446,6 +1478,18 @@ ScriptsOnlyBuild:
     assemblyName: Unity.Timeline.dll
     namespaceName: UnityEngine.Timeline
     className: PlayableTrack
+  - hash:
+      serializedVersion: 2
+      Hash: 645c492076641c6f81a11ca66399cdf7
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: player3
+  - hash:
+      serializedVersion: 2
+      Hash: 60ef6f26f0139f65a118ec72a7457904
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: player4
   platform: 19
   scenePathNames:
   - Assets/Scenes/menu.unity

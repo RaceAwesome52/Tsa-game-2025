@@ -19,18 +19,25 @@ public class miniboss1 : MonoBehaviour
     public GameObject guytospawn1;
     public GameObject bounceguy;
     public int health = 3;
+    public GameObject wintext;
     // Start is called before the first frame update
     void Start()
     {
+        wintext.SetActive(false);
         targets = GameObject.FindGameObjectsWithTag("Player");
         Invoke("themoves", 5f);
         player = targets[Random.Range(0, targets.Length)];
+        boss1anim.SetInteger("state",0);
     }
 
     // Update is called once per frame
     void Update()
     {
+        targets = GameObject.FindGameObjectsWithTag("Player");
         if(health<=0){
+            boss1anim.SetInteger("state",3);
+            CancelInvoke("themoves");
+            CancelInvoke("idle");
             Invoke("destruction",3f);
         }
     }
@@ -58,11 +65,15 @@ public class miniboss1 : MonoBehaviour
     }
     public void summonprojectile()
     {
+        boss1anim.SetInteger("state",1);
         Instantiate(fireballprojectile, transform.position, transform.rotation);
+        Invoke("idle",2f);
         Invoke("themoves", Random.Range(1, 4));
+        
     }
     public void summonbombs()
     {
+        boss1anim.SetInteger("state",1);
         randommove = Random.Range(1, 2);
         if(randommove==1){
             bombpos=new Vector2(transform.position.x+4,transform.position.y);
@@ -80,11 +91,12 @@ public class miniboss1 : MonoBehaviour
             bombpos=new Vector2(transform.position.x-12,transform.position.y);
             Instantiate(bomb, bombpos, transform.rotation);
         }
-        
+        Invoke("idle",1f);
         Invoke("themoves", Random.Range(2, 5));
     }
     public void gravityswitchamove()
     {
+        boss1anim.SetInteger("state",2);
         playerrigidbody=player.GetComponent<Rigidbody2D>();
         sprite=player.GetComponent<SpriteRenderer>();
         playerrigidbody.gravityScale *= -1;
@@ -97,6 +109,7 @@ public class miniboss1 : MonoBehaviour
             return;
         }
         player = targets[Random.Range(0, targets.Length)];
+        Invoke("idle",1f);
         Invoke("themoves", Random.Range(1, 2));
     }
     public void spawnguys(){
@@ -124,6 +137,10 @@ public class miniboss1 : MonoBehaviour
         
     }
     public void destruction(){
+        wintext.SetActive(true);
         Destroy(gameObject);
+    }
+    public void idle(){
+        boss1anim.SetInteger("state",0);
     }
 }
