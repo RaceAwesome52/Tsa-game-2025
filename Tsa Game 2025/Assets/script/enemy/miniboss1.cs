@@ -20,6 +20,7 @@ public class miniboss1 : MonoBehaviour
     public GameObject bounceguy;
     public int health = 3;
     public GameObject wintext;
+    public hat hatcode;
     // Start is called before the first frame update
     void Start()
     {
@@ -100,6 +101,12 @@ public class miniboss1 : MonoBehaviour
         playerrigidbody=player.GetComponent<Rigidbody2D>();
         sprite=player.GetComponent<SpriteRenderer>();
         playerrigidbody.gravityScale *= -1;
+        if(player.name=="player3"){
+            hatcode.p3hatswap();
+        }
+        if(player.name=="player4"){
+            hatcode.p4hatswap();
+        }
         if(sprite.flipY==false){
             sprite.flipY=true;
             return;
@@ -131,6 +138,8 @@ public class miniboss1 : MonoBehaviour
                 sprite=player.GetComponent<SpriteRenderer>();
                 sprite.flipY=false;
                 playerrigidbody.gravityScale = 3;
+                hatcode.p3hatreset();
+                hatcode.p4hatreset();
             }
             Invoke("themoves", 3f);
         }

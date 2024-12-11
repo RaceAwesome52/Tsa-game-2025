@@ -30,6 +30,7 @@ public class player3 : MonoBehaviour
     public SpriteRenderer otherrender;
     public SpriteRenderer otherrender2;
     public SpriteRenderer otherrender3;
+    public hat hatcode;
     // Start is called before the first frame update
     void Start()
     {
@@ -172,5 +173,7 @@ public class player3 : MonoBehaviour
         player2object.transform.position=player2orgin.position;
         player3object.transform.position=player3orgin.position;
         player4object.transform.position=player4orgin.position;
+        hatcode.p3hatreset();
+        hatcode.p4hatreset();
     }
 }
