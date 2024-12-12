@@ -75,7 +75,7 @@ public class miniboss1 : MonoBehaviour
     public void summonbombs()
     {
         boss1anim.SetInteger("state",1);
-        randommove = Random.Range(1, 2);
+        randommove = Random.Range(1, 3);
         if(randommove==1){
             bombpos=new Vector2(transform.position.x+4,transform.position.y);
             Instantiate(bomb, bombpos, transform.rotation);

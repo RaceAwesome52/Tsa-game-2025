@@ -60,6 +60,7 @@ public class menubutton : MonoBehaviour
     }
     public void howtoplay(){
         audio.Play();
+        Application.Quit();
     }
     public void level1(){
         SceneManager.LoadScene(1);

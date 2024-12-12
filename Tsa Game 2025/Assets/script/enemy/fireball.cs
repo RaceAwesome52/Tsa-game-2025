@@ -6,17 +6,14 @@ public class fireball : MonoBehaviour
 {
     public GameObject player;
     public int speed;
-    public bool idkwhattocallthis;
     public Vector2 get;
     public GameObject[] targets;
     // Start is called before the first frame update
     void Start()
     {
-        idkwhattocallthis = false;
         targets = GameObject.FindGameObjectsWithTag("Player");
         player = targets[Random.Range(0, targets.Length)];
-        get = new Vector2(player.transform.position.x * 3, player.transform.position.y * 3);
-        Invoke("truify", 0.5f);
+        get = new Vector2(player.transform.position.x * 9, player.transform.position.y * 9);
         //transform.LookAt(player.transform);
         Quaternion rotation = Quaternion.LookRotation(player.transform.position - transform.position ,transform.TransformDirection(Vector3.up));
         transform.rotation = new Quaternion(  0, 0 , rotation.z , rotation.w );
@@ -26,14 +23,14 @@ public class fireball : MonoBehaviour
     void Update()
     {
         transform.position = Vector2.MoveTowards(transform.position, get, speed * Time.deltaTime);
-        
-        if (idkwhattocallthis == false)
-        {
-            get = new Vector2(player.transform.position.x * 5, player.transform.position.y * 5);
-        }
     }
-    public void truify()
+    public void death()
     {
-        idkwhattocallthis = true;
+        Destroy(gameObject);
+    }
+    public void OnTriggerEnter2D(Collider2D other){
+        if(other.gameObject.tag=="Player"){
+            Invoke("death", 0.1f);
+        }
     }
 }

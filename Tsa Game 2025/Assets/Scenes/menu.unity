@@ -402,7 +402,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.118
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -498,7 +498,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.129
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2347,7 +2347,7 @@ GameObject:
   - component: {fileID: 1214214020}
   - component: {fileID: 1214214019}
   m_Layer: 5
-  m_Name: how to play button
+  m_Name: quit
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -2369,8 +2369,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 198.1, y: -12.999996}
-  m_SizeDelta: {x: 175.51807, y: 164.03143}
+  m_AnchoredPosition: {x: 326, y: -203.77}
+  m_SizeDelta: {x: 110.47925, y: 67.53875}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1214214019
 MonoBehaviour:
@@ -2445,8 +2445,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 5418155012235580314, guid: 970e6d313baa139439502e94805d8bb3,
-    type: 3}
+  m_Sprite: {fileID: 21300000, guid: 32d32dbe881d29445a548f26693c9f02, type: 3}
   m_Type: 0
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -3160,7 +3159,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: "Stephen Ramsey\nPatrick ray \nFinn\nTony \nFinn\n"
+  m_Text: "Stephen Ramsey\nPatrick Ray \nFinn Ballard\nTony Mitchell\n"
 --- !u!222 &1931081057
 CanvasRenderer:
   m_ObjectHideFlags: 0
