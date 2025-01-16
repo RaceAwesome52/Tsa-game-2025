@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class miniboss1 : MonoBehaviour
 {
@@ -146,8 +147,9 @@ public class miniboss1 : MonoBehaviour
         
     }
     public void destruction(){
-        wintext.SetActive(true);
+        //wintext.SetActive(true);
         Destroy(gameObject);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex+1);
     }
     public void idle(){
         boss1anim.SetInteger("state",0);
